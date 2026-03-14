@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Project placeholder">
+  <defs>
+    <linearGradient id="surface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8ef"/>
+      <stop offset="100%" stop-color="#efdfcf"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#23443c"/>
+      <stop offset="100%" stop-color="#b24c2c"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#surface)"/>
+  <rect x="78" y="72" width="804" height="396" rx="28" fill="#fffdf9" stroke="#1e1b18" stroke-opacity=".08" stroke-width="6"/>
+  <rect x="126" y="122" width="314" height="14" rx="7" fill="#23443c" fill-opacity=".18"/>
+  <rect x="126" y="158" width="236" height="42" rx="21" fill="url(#accent)"/>
+  <rect x="126" y="234" width="302" height="16" rx="8" fill="#1e1b18" fill-opacity=".16"/>
+  <rect x="126" y="266" width="258" height="16" rx="8" fill="#1e1b18" fill-opacity=".12"/>
+  <rect x="126" y="336" width="126" height="28" rx="14" fill="#b24c2c" fill-opacity=".18"/>
+  <rect x="272" y="336" width="126" height="28" rx="14" fill="#23443c" fill-opacity=".18"/>
+  <rect x="542" y="136" width="230" height="230" rx="32" fill="url(#accent)"/>
+  <rect x="584" y="178" width="146" height="20" rx="10" fill="#fff8ef" fill-opacity=".7"/>
+  <rect x="584" y="218" width="110" height="20" rx="10" fill="#fff8ef" fill-opacity=".55"/>
+  <circle cx="650" cy="292" r="42" fill="#fff8ef" fill-opacity=".82"/>
+</svg>

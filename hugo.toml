@@ -1,0 +1,283 @@
+baseURL = "https://albertocanaveral.com/"
+languageCode = "en-us"
+title = "Alberto D Canaveral"
+theme = "hugo-profile"
+
+[params]
+title = "Alberto D Canaveral"
+description = "Cloud Engineer focused on secure AWS infrastructure, Terraform, IAM, CI/CD, and resilient hybrid environments."
+favicon = "/fav.png"
+useBootstrapCDN = false
+mathjax = false
+animate = true
+customCSS = true
+copyright = "Alberto D Canaveral"
+
+[params.theme]
+defaultTheme = "light"
+
+[params.font]
+fontSize = "1rem"
+fontWeight = 400
+lineHeight = 1.6
+textAlign = "left"
+
+[params.color]
+textColor = "#1e1b18"
+secondaryTextColor = "#61554b"
+textLinkColor = "#b24c2c"
+backgroundColor = "#f6efe5"
+secondaryBackgroundColor = "#fffaf2"
+primaryColor = "#23443c"
+secondaryColor = "#fffaf2"
+
+[params.color.darkmode]
+textColor = "#f3e6d6"
+secondaryTextColor = "#c8b8a7"
+textLinkColor = "#f0a07f"
+backgroundColor = "#171411"
+secondaryBackgroundColor = "#241d18"
+primaryColor = "#d6e8e1"
+secondaryColor = "#241d18"
+
+[params.navbar]
+align = "ms-auto"
+brandName = "Alberto D Canaveral"
+disableSearch = true
+enableSeparator = false
+
+[params.navbar.stickyNavBar]
+enable = true
+showOnScrollUp = true
+
+[params.navbar.menus]
+disableAbout = false
+disableExperience = false
+disableEducation = false
+disableProjects = false
+disableAchievements = false
+disableContact = false
+
+[params.hero]
+enable = true
+intro = "Hello, my name is"
+title = "Alberto D Canaveral"
+subtitle = "Cloud Engineer | AWS | Terraform"
+content = "I build secure AWS and hybrid platforms with Terraform, IAM, ECS, and CI/CD, with a focus on repeatable delivery and resilient operations."
+image = "/images/alberto-profile.png"
+roundImage = false
+
+[params.hero.bottomImage]
+enable = false
+
+[params.hero.button]
+enable = false
+name = "Resume"
+url = "#"
+download = false
+newPage = true
+
+[params.about]
+enable = true
+title = "About Me"
+image = "/images/alberto-profile.png"
+content = """
+Cloud Engineer with hands-on experience building secure AWS infrastructure using Terraform, CloudFormation, IAM, ECS, and CI/CD. My work centers on reusable infrastructure, cloud networking, least-privilege access, and dependable delivery across AWS and hybrid environments.
+
+Alongside cloud engineering, I bring a systems background in identity, endpoint, and platform operations. That blend helps me improve reliability through hardening, remediation, documentation, and clear operational standards.
+"""
+
+[params.about.skills]
+enable = true
+title = "Core skills"
+items = [
+  "AWS: IAM, ECS/Fargate, EC2, S3, VPC",
+  "Terraform & CloudFormation",
+  "GitHub Actions & CI/CD",
+  "Least-Privilege IAM, OIDC & MFA",
+  "Linux hardening, patching & remediation",
+  "Hybrid infrastructure, DNS, DHCP & VPN",
+  "Python, PowerShell & shell scripting",
+  "Architecture diagrams, SOPs & C4 documentation",
+  "LLM tooling: Bedrock, Copilot, ChatGPT & Codex",
+]
+
+[params.experience]
+enable = true
+title = "Experience"
+
+[[params.experience.items]]
+company = "Agilant Solutions, Inc."
+companyUrl = "#"
+
+[[params.experience.items.jobs]]
+name = "System Engineer"
+date = "Oct 2023 - Present"
+content = """
+- Ran hybrid infrastructure across servers, networking, Linux, and identity services with an emphasis on secure, repeatable platform operations.
+- Applied least-privilege access, MFA, and policy standards to strengthen governance and reduce risk across user and infrastructure access.
+- Investigated authentication, network, and system incidents at the root-cause level, then introduced preventive fixes to reduce recurring failures.
+- Led refresh, remediation, migration, and rebuild efforts through controlled change management to keep production systems stable.
+- Hardened Linux systems and patch workflows against CIS Controls, NIST guidance, and ISO 27001 expectations while improving audit readiness.
+- Created architecture diagrams, SOPs, and SharePoint-backed Copilot knowledge workflows to make support more consistent and scalable.
+"""
+
+[[params.experience.items]]
+company = "CloudFracture"
+companyUrl = "#"
+
+[[params.experience.items.jobs]]
+name = "Cloud Engineer - Independent Contractor"
+date = "Apr 2023 - Present"
+content = """
+- Built GitHub Actions pipelines to lint, plan, review, and deploy Terraform across multi-account AWS environments.
+- Used OIDC-based role assumption and environment approvals to strengthen release security and reduce manual deployment effort.
+- Provisioned AWS infrastructure across IAM, EC2, S3, networking, and account baselines using reusable Terraform modules and standardized templates.
+- Enforced Git-based change management with branches, pull requests, reviews, and deployment gates to improve traceability and reduce drift.
+- Implemented landing zone automation with AWS Control Tower and CloudFormation to speed account onboarding and baseline governance.
+"""
+
+[[params.experience.items]]
+company = "A&R Realty"
+companyUrl = "#"
+
+[[params.experience.items.jobs]]
+name = "IT Systems Administrator"
+date = "Mar 2021 - Apr 2023"
+content = """
+- Administered secure small-business IT across identity, endpoints, and cloud application access with consistent onboarding and offboarding workflows.
+- Implemented MFA, baseline device provisioning, patching, and access policies to strengthen authentication and reduce recurring support effort.
+- Wrote runbooks, onboarding checklists, and recovery SOPs that improved reliability and shortened common resolution paths.
+"""
+
+[params.education]
+enable = true
+index = false
+title = "Education"
+
+[[params.education.items]]
+title = "Self-Employed Business Owner"
+date = "Since 2021"
+content = """
+Built a professional foundation in client relationships, sales, and real estate while operating in self-directed business environments. That experience strengthened communication, trust-building, problem-solving, and the ability to manage work with an ownership mindset.
+"""
+
+[params.education.items.school]
+name = "Professional Background"
+
+[[params.education.items]]
+title = "Business Administration Studies"
+date = "2005 - 2006"
+content = """
+Studied business administration and management with an emphasis on operations, communication, and practical decision-making. That foundation still shapes how I think about service delivery, documentation, and business-aligned technical work.
+"""
+
+[params.education.items.school]
+name = "University of Illinois at Chicago"
+
+[[params.education.items]]
+title = "High School Diploma"
+date = "2000 - 2004"
+content = """
+Activities and achievements included Eagle Scout, National Honors Society, band, debate team, student leadership, and technology club. Those experiences helped build an early foundation in leadership, collaboration, and technical curiosity.
+"""
+
+[params.education.items.school]
+name = "Morton West High School"
+
+[params.achievements]
+enable = true
+title = "Certifications"
+
+[[params.achievements.items]]
+title = "AWS Solutions Architect - Associate"
+content = "Amazon Web Services (AWS) • Issued Feb 2025 • Expires Feb 2028"
+image = "/images/certs/aws-solutions-architect-associate.png"
+url = "https://www.credly.com/badges/df03c5cd-d1b2-4d09-8238-2ee1281f63c6"
+
+[[params.achievements.items]]
+title = "HashiCorp Certified: Terraform Associate (003)"
+content = "HashiCorp • Issued Jul 2025 • Expires Jul 2027"
+image = "/images/certs/terraform-associate.svg"
+url = "https://www.credly.com/badges/0fde758a-3fda-41aa-a906-cf4e7076f9df#:~:text=July%2024%2C%202027-,Verified,-Celebrate"
+
+[[params.achievements.items]]
+title = "CompTIA Server+"
+content = "CompTIA • Issued Mar 2026 • Expires Mar 2029"
+image = "/images/certs/comptia-server-plus.png"
+url = "https://www.credly.com/badges/94c11768-32f6-4772-bb0c-5684810c8d06"
+
+[[params.achievements.items]]
+title = "CompTIA A+"
+content = "CompTIA • Issued Aug 2023 • Credential ID 456592580"
+image = "/images/certs/comptia-a-plus.svg"
+
+[[params.achievements.items]]
+title = "Linux Essentials"
+content = "Linux Professional Institute (LPI) • Issued Oct 2023 • Credential ID LPI000582935"
+image = "/images/certs/linux-essentials.svg"
+url = "https://cs.lpi.org/caf/Xamman/certification/verify/LPI000582935/rdybfh68tf"
+
+[params.projects]
+enable = true
+title = "Selected Work"
+
+[[params.projects.items]]
+title = "ECS Fargate Terraform + CI/CD Scaffold"
+content = "Built AWS infrastructure for a containerized ECS Fargate workload using modular Terraform, IAM-aware design, and GitHub Actions validation so environments could be deployed more consistently and securely."
+image = "/images/projects/ecs-fargate-terraform-ci-cd.png"
+badges = ["ECS Fargate", "Terraform", "GitHub Actions", "IAM"]
+
+[[params.projects.items]]
+title = "AWS Landing Zone Automation"
+content = "Automated new-account provisioning with AWS Control Tower and CloudFormation, standardizing roles, networking baselines, and foundational guardrails for repeatable onboarding."
+image = "/images/projects/aws-control-tower-automation.png"
+badges = ["AWS Control Tower", "CloudFormation", "IAM", "Networking"]
+
+[[params.projects.items]]
+title = "Hybrid Platform Hardening"
+content = "Improved operational resilience across hybrid infrastructure through Linux patching, remediation workflows, least-privilege access, MFA, and clearer SOP-driven support processes."
+image = "/images/projects/hybrid-platform-hardening.png"
+badges = ["Linux", "Security Hardening", "MFA", "Operations"]
+
+[params.contact]
+enable = true
+title = "Contact"
+content = "Based in the Chicago area and open to cloud platform, infrastructure, and cloud operations engineering opportunities."
+
+[params.footer.recentPosts]
+path = "blogs"
+count = 3
+title = "Recent Posts"
+enable = false
+disableFeaturedImage = false
+
+[params.footer.socialNetworks]
+linkedin = "https://www.linkedin.com/in/acanave"
+
+[params.listPages]
+disableFeaturedImage = false
+
+[params.singlePages]
+socialShare = true
+
+[params.singlePages.readTime]
+enable = true
+content = "min read"
+
+[params.singlePages.scrollprogress]
+enable = true
+
+[params.singlePages.tags]
+openInNewTab = true
+
+[params.terms]
+read = "Read"
+toc = "Table Of Contents"
+copyright = "All rights reserved"
+emailText = "Check out this site"
+
+[params.datesFormat]
+article = "Jan 2, 2006"
+articleList = "Jan 2, 2006"
+articleRecent = "Jan 2, 2006"

@@ -1,0 +1,60 @@
+name = 'Your Name'
+role = 'Designer, developer, and systems thinker'
+location = 'Based in your city'
+email = 'hello@example.com'
+resume = '#'
+intro = 'I build polished digital products with a bias toward clarity, performance, and durable systems.'
+
+[[socials]]
+label = 'GitHub'
+url = 'https://github.com/yourusername'
+
+[[socials]]
+label = 'LinkedIn'
+url = 'https://www.linkedin.com/in/yourusername'
+
+[[socials]]
+label = 'Email'
+url = 'mailto:hello@example.com'
+
+[[highlights]]
+title = 'Product-minded execution'
+description = 'From information architecture through implementation, I keep the work coherent and measurable.'
+
+[[highlights]]
+title = 'Frontend craft'
+description = 'Responsive interfaces, performance budgets, accessible markup, and pragmatic motion.'
+
+[[highlights]]
+title = 'Systems thinking'
+description = 'I reduce complexity with good defaults, reusable patterns, and disciplined technical decisions.'
+
+[[projects]]
+name = 'Project One'
+summary = 'A short case study describing the problem, approach, and visible outcome.'
+stack = 'Hugo, JavaScript, CSS'
+link = '#'
+
+[[projects]]
+name = 'Project Two'
+summary = 'Another project entry with a tight explanation of the work and why it mattered.'
+stack = 'React, TypeScript, Node.js'
+link = '#'
+
+[[projects]]
+name = 'Project Three'
+summary = 'A third project slot for consulting, a product, or an internal systems initiative.'
+stack = 'Go, PostgreSQL, Docker'
+link = '#'
+
+[[experience]]
+company = 'Company Name'
+title = 'Role Title'
+period = '2024 - Present'
+details = 'Summarize scope, outcomes, and responsibilities in one or two strong sentences.'
+
+[[experience]]
+company = 'Previous Company'
+title = 'Earlier Role'
+period = '2021 - 2024'
+details = 'Focus on decisions made, systems improved, or measurable impact delivered.'

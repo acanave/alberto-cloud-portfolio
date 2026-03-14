@@ -1,0 +1,46 @@
+#achievements .card-head {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1.5rem 0;
+}
+
+#achievements .card-img-top {
+  width: 65%;
+  max-width: 156px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+#achievements .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#achievements .card-title {
+  text-align: center;
+}
+
+#achievements .card-text {
+  max-width: 28ch;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#hero .hero-name {
+  white-space: nowrap;
+}
+
+#hero .hero-role,
+#hero .hero-tools {
+  font-size: clamp(30px, 6vw, 52px);
+  opacity: 0.5;
+  margin: 0;
+}
+
+footer img[alt="Footer logo"] {
+  width: 96px;
+  height: auto;
+}
