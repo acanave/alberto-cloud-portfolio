@@ -21,8 +21,11 @@
                             {{ .content }}
                         </div>
                     </div>
-                    {{ if or (.links) (.featured) }}
+                    {{ if or (.links) (.featured) (.status) }}
                     <div class="card-footer py-3">
+                        {{ if .status }}
+                        <span class="badge badge-secondary">{{ .status }}</span>
+                        {{ end }}
                         {{ range .links }}
                         <span class="m-1 mx-2">
                             <a href="{{ .url }}" target="_blank">
@@ -61,6 +64,9 @@
                         </div>
                     </div>
                     <div class="card-footer py-3">
+                        {{ if .Params.status }}
+                        <span class="badge badge-secondary">{{ .Params.status }}</span>
+                        {{ end }}
                         {{ range .Params.links }}
                         <span class="m-1 mx-2">
                             <a href="{{ .url }}">
