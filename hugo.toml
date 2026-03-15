@@ -220,25 +220,28 @@ url = "https://cs.lpi.org/caf/Xamman/certification/verify/LPI000582935/rdybfh68t
 
 [params.projects]
 enable = true
-title = "Selected Work"
+title = "Projects"
 
 [[params.projects.items]]
 title = "ECS Fargate Terraform + CI/CD Scaffold"
-content = "Built AWS infrastructure for a containerized ECS Fargate workload using modular Terraform, IAM-aware design, and GitHub Actions validation so environments could be deployed more consistently and securely."
+content = "Technical summary: modular Terraform provisions the network, IAM, and ECS Fargate layers for a containerized workload, while GitHub Actions validates infrastructure changes before release to keep deployments repeatable and lower-risk."
 image = "/images/projects/ecs-fargate-terraform-ci-cd.png"
 badges = ["ECS Fargate", "Terraform", "GitHub Actions", "IAM"]
+status = "coming soon"
 
 [[params.projects.items]]
 title = "AWS Landing Zone Automation"
-content = "Automated new-account provisioning with AWS Control Tower and CloudFormation, standardizing roles, networking baselines, and foundational guardrails for repeatable onboarding."
+content = "Technical summary: Control Tower and CloudFormation automate account vending, baseline IAM roles, and foundational networking guardrails so new AWS environments can be onboarded with consistent controls and less manual setup."
 image = "/images/projects/aws-control-tower-automation.png"
 badges = ["AWS Control Tower", "CloudFormation", "IAM", "Networking"]
+status = "coming soon"
 
 [[params.projects.items]]
 title = "Hybrid Platform Hardening"
-content = "Improved operational resilience across hybrid infrastructure through Linux patching, remediation workflows, least-privilege access, MFA, and clearer SOP-driven support processes."
+content = "Technical summary: hardening work focused on Linux patching, remediation workflow design, least-privilege access, MFA, and support-ready SOPs to improve resilience across hybrid infrastructure and day-2 operations."
 image = "/images/projects/hybrid-platform-hardening.png"
 badges = ["Linux", "Security Hardening", "MFA", "Operations"]
+status = "coming soon"
 
 [params.contact]
 enable = true

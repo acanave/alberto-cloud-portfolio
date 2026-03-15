@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">Trust boundary progression for the Lambda access control lab</title>
+  <desc id="desc">Three horizontal diagrams comparing where trust is enforced for a public Lambda URL, a shared-secret Lambda, and API Gateway with IAM authorization.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffaf2" />
+      <stop offset="100%" stop-color="#f6efe5" />
+    </linearGradient>
+    <style>
+      text { font-family: Georgia, "Times New Roman", serif; fill: #1e1b18; }
+      .title { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 19px; fill: #61554b; }
+      .row-title { font-size: 20px; font-weight: 700; }
+      .box { fill: #ffffff; stroke: #23443c; stroke-width: 2; rx: 15; }
+      .lambda { fill: #fff1e8; stroke: #b24c2c; stroke-width: 2; rx: 15; }
+      .gateway { fill: #edf5f2; stroke: #23443c; stroke-width: 2; rx: 15; }
+      .trust { fill: rgba(178, 76, 44, 0.08); stroke: #b24c2c; stroke-width: 3; stroke-dasharray: 10 8; rx: 22; }
+      .label { font-size: 18px; font-weight: 700; }
+      .small { font-size: 16px; fill: #61554b; }
+      .center { text-anchor: middle; dominant-baseline: middle; }
+      .line { stroke: #23443c; stroke-width: 3; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="500" fill="url(#bg)" />
+  <text x="60" y="60" class="title">Where the trust boundary lives</text>
+  <text x="60" y="96" class="subtitle">The handler stays similar; the security boundary shifts from Lambda to the edge.</text>
+
+  <text x="80" y="122" class="row-title">Version 1: public function URL</text>
+  <rect x="240" y="126" width="230" height="90" class="trust" />
+  <rect x="80" y="136" width="120" height="72" class="box" />
+  <rect x="270" y="136" width="170" height="72" class="lambda" />
+  <line x1="200" y1="170" x2="270" y2="170" class="line" />
+  <text x="140" y="172" class="label center">Client</text>
+  <text x="355" y="172" class="label center">
+    <tspan x="355" dy="-10">Lambda URL</tspan>
+    <tspan x="355" dy="22">+ Lambda</tspan>
+  </text>
+  <text x="515" y="176" class="small">Trust is enforced inside the public function boundary.</text>
+
+  <text x="80" y="252" class="row-title">Version 2: shared secret in Lambda</text>
+  <rect x="240" y="256" width="290" height="92" class="trust" />
+  <rect x="80" y="266" width="120" height="74" class="box" />
+  <rect x="270" y="266" width="230" height="74" class="lambda" />
+  <line x1="200" y1="300" x2="270" y2="300" class="line" />
+  <text x="140" y="303" class="label center">Client</text>
+  <text x="385" y="303" class="label center">
+    <tspan x="385" dy="-20">Lambda URL</tspan>
+    <tspan x="385" dy="20">+ header validation</tspan>
+    <tspan x="385" dy="20">+ Lambda</tspan>
+  </text>
+  <text x="560" y="308" class="small">Validation is stronger, but it still lives in application code.</text>
+
+  <text x="80" y="382" class="row-title">Version 3: IAM authorization at API Gateway</text>
+  <rect x="240" y="386" width="230" height="92" class="trust" />
+  <rect x="80" y="396" width="120" height="74" class="box" />
+  <rect x="270" y="396" width="180" height="74" class="gateway" />
+  <rect x="520" y="396" width="150" height="74" class="lambda" />
+  <line x1="200" y1="430" x2="270" y2="430" class="line" />
+  <line x1="450" y1="430" x2="520" y2="430" class="line" />
+  <text x="140" y="433" class="label center">Client</text>
+  <text x="360" y="433" class="label center">
+    <tspan x="360" dy="-10">API Gateway</tspan>
+    <tspan x="360" dy="22">IAM auth</tspan>
+  </text>
+  <text x="595" y="433" class="label center">Lambda</text>
+  <text x="840" y="428" class="small center">
+    <tspan x="840" dy="0">The boundary moves to the edge</tspan>
+    <tspan x="840" dy="20">and blocks unauthorized traffic</tspan>
+    <tspan x="840" dy="20">before invoke.</tspan>
+  </text>
+</svg>

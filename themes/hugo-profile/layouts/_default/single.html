@@ -32,7 +32,7 @@
               {{ end }}
             </div>
           </div>
-          {{ if .Params.image }}
+          {{ if and .Params.image (not (.Params.hideFeaturedImage | default false)) }}
           <div class="featured-image">
             <img class="img-fluid mx-auto d-block" src="{{ .Params.image }}" alt="{{ .Title }}">
           </div>
