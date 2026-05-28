@@ -2,20 +2,20 @@
 title = "WorkWindow"
 date = 2026-04-11T10:00:00-05:00
 draft = false
-description = "A local-first planning workspace that unifies calendar scheduling, Kanban execution, and workload visibility, with an optional Supabase sync path."
-summary = "A local-first planning workspace that unifies calendar scheduling, Kanban execution, and workload visibility, with an optional Supabase sync path."
+description = "A local-first planning workspace for scheduling, execution, and workload visibility, with optional Supabase sync."
+summary = "Local-first planning workspace for scheduling, execution, and workload visibility."
 image = "/images/projects/workwindow-board-overview.png"
 hideFeaturedImage = true
 showInHome = true
 toc = true
-tags = ["React", "Vite", "Local-First", "Kanban", "Calendar", "Supabase", "Testing", "Security"]
+tags = ["React", "Vite", "Local-First", "Kanban", "Calendar", "Supabase", "Dependencies", "Risk"]
 badges = ["React", "Vite", "Local-First", "Kanban", "Calendar", "Supabase"]
 [[links]]
 icon = "fab fa-github"
 url = "https://github.com/acanave/WorkWindow"
 +++
 
-WorkWindow is a local-first planning workspace for people who want scheduling, execution, and workload visibility in one place. It keeps commitments, progress, and risk signals connected so planning feels clearer and more usable day to day.
+WorkWindow is a local-first planning workspace built around cards, due dates, work windows, and connected risk signals. It keeps scheduling, execution, and workload visibility in one place so planning feels clearer and more usable day to day.
 
 The screenshots in this page are generated from a seeded demo workflow so the UI state stays consistent when reviewing the project.
 
@@ -57,7 +57,7 @@ For setup details, see the README and cloud guide:
 
 ## Implementation boundaries
 
-WorkWindow is maintained as a public product repo, so the boundary is simple: keep the repo focused on product code and public-safe defaults.
+WorkWindow is maintained as a public app repo, so the boundary is simple: keep the repository focused on implementation, docs, and public-safe defaults.
 
 - Include: UI, app logic, tests, docs, schema, migration scripts, and sample data.
 - Exclude: personal secrets, bot tokens, private deployment credentials, personal automation scripts, and exported personal task data.
