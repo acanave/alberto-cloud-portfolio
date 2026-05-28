@@ -8,23 +8,23 @@ image = "/images/projects/workwindow-board-overview.png"
 hideFeaturedImage = true
 showInHome = true
 toc = true
-tags = ["React", "Vite", "Local-First", "Supabase", "Testing", "Security"]
-badges = ["React", "Vite", "Local-First", "Supabase", "Testing", "Security"]
+tags = ["React", "Vite", "Local-First", "Kanban", "Calendar", "Supabase", "Testing", "Security"]
+badges = ["React", "Vite", "Local-First", "Kanban", "Calendar", "Supabase"]
 [[links]]
 icon = "fab fa-github"
 url = "https://github.com/acanave/WorkWindow"
 +++
 
-WorkWindow started as a practical fix for a familiar problem: task lists, calendars, and boards each help on their own, but they rarely show the whole planning picture. This version keeps commitments, workload, and progress visible in one workspace so weekly planning feels clearer and less fragmented.
+WorkWindow is a local-first planning workspace for people who want scheduling, execution, and workload visibility in one place. It keeps commitments, progress, and risk signals connected so planning feels clearer and more usable day to day.
 
 The screenshots in this page are generated from a seeded demo workflow so the UI state stays consistent when reviewing the project.
 
-## Why this project matters
+## Why this matters
 
 ![WorkWindow calendar overview](/images/projects/workwindow-calendar-overview.png)
 ![WorkWindow board overview](/images/projects/workwindow-board-overview.png)
 
-WorkWindow is a good portfolio project because it treats planning as a connected workflow, not just a UI screen. The calendar, board, and workload view all support the same execution model, which makes the product easier to reason about and more useful in day-to-day use.
+WorkWindow is useful because it treats planning as a connected workflow, not just a UI surface. The calendar, board, and workload view all support the same execution model, which makes the app easier to reason about and more useful in day-to-day use.
 
 ## Core capabilities
 
@@ -50,12 +50,12 @@ When no cloud env vars are present, WorkWindow opens in local-first mode. If Sup
 
 ![WorkWindow mode chooser](/images/projects/workwindow-mode-chooser.png)
 
-For the setup steps, see the repository README and cloud guide:
+For setup details, see the README and cloud guide:
 
 - [README](https://github.com/acanave/WorkWindow/blob/main/README.md)
 - [Cloud sync setup](https://github.com/acanave/WorkWindow/blob/main/docs/cloud-setup.md)
 
-## Repository boundaries
+## Implementation boundaries
 
 WorkWindow is maintained as a public product repo, so the boundary is simple: keep the repo focused on product code and public-safe defaults.
 
@@ -76,6 +76,6 @@ Links:
 - Privacy notice: [PRIVACY.md](https://github.com/acanave/WorkWindow/blob/main/PRIVACY.md)
 - Contribution notes: [CONTRIBUTING.md](https://github.com/acanave/WorkWindow/blob/main/CONTRIBUTING.md)
 
-## Key takeaway
+## Takeaway
 
 WorkWindow shows that a real planning workflow can stay local-first, add cloud sync later, and still feel fast, understandable, and easy to evaluate.
