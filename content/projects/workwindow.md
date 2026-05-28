@@ -2,93 +2,80 @@
 title = "WorkWindow"
 date = 2026-04-11T10:00:00-05:00
 draft = false
-description = "A planning workspace that combines a to-do list, Kanban flow, and calendar scheduling in one React and Vite interface, with dual launch options for local use or Supabase-backed sync."
-summary = "A planning workspace that combines a to-do list, Kanban board, and calendar view, with dual launch options for local use or Supabase-backed sync."
-image = "/images/projects/workwindow-board-overview.svg"
+description = "A local-first planning workspace that unifies calendar scheduling, Kanban execution, and workload visibility, with an optional Supabase sync path."
+summary = "A local-first planning workspace that unifies calendar scheduling, Kanban execution, and workload visibility, with an optional Supabase sync path."
+image = "/images/projects/workwindow-board-overview.png"
 hideFeaturedImage = true
 showInHome = true
 toc = true
-tags = ["React", "Vite", "Supabase", "Local-First", "Productivity", "Frontend"]
-badges = ["React", "Vite", "Supabase", "dual launch", "Kanban", "Calendar"]
+tags = ["React", "Vite", "Local-First", "Supabase", "Testing", "Security"]
+badges = ["React", "Vite", "Local-First", "Supabase", "Testing", "Security"]
 [[links]]
 icon = "fab fa-github"
 url = "https://github.com/acanave/WorkWindow"
 +++
 
-This showcase is based on the repository at [acanave/WorkWindow](https://github.com/acanave/WorkWindow). The project started from a real workflow gap: task lists, calendars, and Kanban boards each solve part of planning, but they often leave the actual delivery picture scattered across separate tools. WorkWindow brings those views together into one interface so planning, status, and execution can be understood in the same place.
+WorkWindow started as a practical fix for a familiar problem: task lists, calendars, and boards each help on their own, but they rarely show the whole planning picture. This version keeps commitments, workload, and progress visible in one workspace so weekly planning feels clearer and less fragmented.
 
-## Why this project is worth showcasing
+The screenshots in this page are generated from a seeded demo workflow so the UI state stays consistent when reviewing the project.
 
-Many productivity apps can demo a board or a calendar in isolation. WorkWindow is more interesting as a portfolio project because it treats planning as a systems problem instead of a single-screen UI problem.
+## Why this project matters
 
-| Area | What WorkWindow does | Why it matters |
-| --- | --- | --- |
-| Planning model | Combines Kanban, calendar scheduling, and progress signals | Shows product thinking beyond CRUD task management |
-| Runtime model | Works locally first with no backend dependency | Makes the app useful immediately and easier to evaluate |
-| Upgrade path | Adds optional Supabase-backed auth and sync | Demonstrates architectural flexibility instead of hard backend coupling |
-| Engineering depth | Uses normalized state, migration scaffolding, and tests | Turns a UI concept into a durable frontend system |
+![WorkWindow calendar overview](/images/projects/workwindow-calendar-overview.png)
+![WorkWindow board overview](/images/projects/workwindow-board-overview.png)
 
-That mix makes the repo a strong showcase of both product judgment and frontend engineering discipline.
+WorkWindow is a good portfolio project because it treats planning as a connected workflow, not just a UI screen. The calendar, board, and workload view all support the same execution model, which makes the product easier to reason about and more useful in day-to-day use.
 
-## Architecture
+## Core capabilities
 
-![WorkWindow board overview](/images/projects/workwindow-board-overview.svg)
+- Kanban board with Backlog, In Progress, Blocked, and Done lanes.
+- Month calendar with due-date anchors and supporting work windows.
+- Dependency warnings, chain visibility, and cycle badges.
+- Due-date shortfall and overdue risk indicators.
+- Performance panel with burnup, plan coverage, and weekly velocity.
+- JSON import/export and local/cloud mode support.
+- Touch-friendly fallback actions for planning and status changes.
 
-WorkWindow is built as a **React + Vite** application with a local-first user experience. The default path is intentionally lightweight: the planner can run fully in the browser, persist state locally, and stay useful without external infrastructure.
+## Technical snapshot
 
-The architecture also leaves room for a more production-oriented mode. When Supabase is configured, the same planning state can be hydrated into an authenticated user flow with cloud-backed persistence. That creates a clean progression from immediate local evaluation to multi-device access, without forcing the app to depend on backend services just to be usable.
+- React + Vite frontend with local-first state persistence.
+- Optional Supabase Auth + Postgres sync path.
+- Normalized reducer-driven state with migration scaffolding.
+- Tests across store logic, calendar interactions, and Kanban flows.
+- CI-gated quality checks with automated secret scanning.
 
-The repo also shows careful deployment posture around that split:
+## Optional cloud sync
 
-- local mode works without secrets or service setup
-- cloud mode uses publishable frontend configuration only
-- hosted deployments can add auth and sync without changing the core planning model
-- security headers and deploy-ready configuration are included for the hosted path
+When no cloud env vars are present, WorkWindow opens in local-first mode. If Supabase is configured, the same planner can sync authenticated state across devices without changing the core product model.
 
-## Product highlights
+![WorkWindow mode chooser](/images/projects/workwindow-mode-chooser.png)
 
-WorkWindow is designed to give a clearer picture of delivery than a plain task list can provide.
+For the setup steps, see the repository README and cloud guide:
 
-- A Kanban board tracks work across Backlog, In Progress, Blocked, and Done.
-- A month calendar shows planned work blocks so effort is visible over time, not just in a queue.
-- Dependency warnings and chain visibility help surface sequencing risk before it turns into delay.
-- Due-date signals and shortfall indicators make schedule pressure visible inside the product.
-- JSON import and export keep the local-first workflow portable.
-- Touch-friendly fallback actions support planning flows even where richer interactions are limited.
+- [README](https://github.com/acanave/WorkWindow/blob/main/README.md)
+- [Cloud sync setup](https://github.com/acanave/WorkWindow/blob/main/docs/cloud-setup.md)
 
-The result is a planner that feels focused on execution, not just item storage.
+## Repository boundaries
 
-## Engineering highlights
+WorkWindow is maintained as a public product repo, so the boundary is simple: keep the repo focused on product code and public-safe defaults.
 
-WorkWindow is also a solid frontend engineering artifact because the implementation goes beyond a polished surface.
+- Include: UI, app logic, tests, docs, schema, migration scripts, and sample data.
+- Exclude: personal secrets, bot tokens, private deployment credentials, personal automation scripts, and exported personal task data.
+- Keep live app data in runtime storage, not in git.
+- Keep `.env.example` as placeholders only, and leave `.env.local` untracked.
+- Never expose service-only keys in Vite environment variables.
 
-- Application state is normalized instead of being scattered across ad hoc component state.
-- Schema migration scaffolding makes future evolution of stored data more manageable.
-- A reusable reducer and store setup supports import replacement and state transitions cleanly.
-- Optional cloud bootstrap logic hydrates local state from Supabase without changing the main product model.
-- Test coverage focuses on state behavior, calendar interactions, dependency views, and planning fallbacks.
+Links:
 
-That structure makes the repo useful in a technical discussion because it shows how product behavior is supported by a maintainable internal model.
+- [GitHub repository](https://github.com/acanave/WorkWindow)
+- [README](https://github.com/acanave/WorkWindow/blob/main/README.md)
 
-## Launch paths
+## Trust and Policies
 
-![WorkWindow mode chooser](/images/projects/workwindow-mode-chooser.svg)
-
-WorkWindow supports two clear evaluation paths.
-
-### Local-first mode
-
-This is the fastest way to understand the product. The app runs with browser storage only, which means the full planner can be reviewed without provisioning any services. That makes the project especially strong as a portfolio piece because the core experience is accessible immediately.
-
-### Cloud-sync mode
-
-The second path adds Supabase authentication and persistence for a hosted, multi-device workflow. That path demonstrates that the project is not just a local prototype: it has a practical route toward authenticated sync, user-scoped state, and a more production-oriented deployment shape.
-
-## Repository
-
-- GitHub: [WorkWindow](https://github.com/acanave/WorkWindow)
-- README: [Project overview and setup notes](https://github.com/acanave/WorkWindow/blob/main/README.md)
+- Security policy: [SECURITY.md](https://github.com/acanave/WorkWindow/blob/main/SECURITY.md)
+- Privacy notice: [PRIVACY.md](https://github.com/acanave/WorkWindow/blob/main/PRIVACY.md)
+- Contribution notes: [CONTRIBUTING.md](https://github.com/acanave/WorkWindow/blob/main/CONTRIBUTING.md)
 
 ## Key takeaway
 
-The strongest part of WorkWindow is not just that it looks polished. It shows how a real product idea can be shaped into a local-first application with a credible cloud upgrade path, while still keeping the user experience fast, understandable, and easy to evaluate.
+WorkWindow shows that a real planning workflow can stay local-first, add cloud sync later, and still feel fast, understandable, and easy to evaluate.
