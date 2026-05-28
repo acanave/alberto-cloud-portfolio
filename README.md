@@ -47,25 +47,30 @@ hugo server -D
 
 ## Deploying on AWS
 
-This portfolio is deployed as a static Hugo site on AWS.
+This portfolio is deployed through AWS Amplify as a static Hugo site.
 
-The production DNS path is:
+The live deployment is configured as:
 
-- Route 53 hosted zone for `albertocanaveral.com`
-- CloudFront distribution in front of the site
-- Amazon S3 origin serving the generated static files
+- Amplify app: `alberto-cloud-portfolio`
+- Production branch: `main`
+- Repository: `https://github.com/acanave/alberto-cloud-portfolio`
+- Custom domain: `albertocanaveral.com`
 
-The repo itself does not include deployment automation, so the release flow is the standard static-site pattern:
+Amplify builds the site from `main` with this flow:
 
-1. Build the production site:
+1. Pull the latest commit from `main`.
+2. Download Hugo in the build environment.
+3. Run `./hugo --minify`.
+4. Publish the generated `public/` directory.
 
-```bash
-hugo --gc --minify
-```
+If you want to update the live site:
 
-2. Upload the generated `public/` directory to the S3 bucket used by the site.
-3. Invalidate the CloudFront cache so the new files are served globally.
-4. Route 53 continues to point `albertocanaveral.com` and `www.albertocanaveral.com` at CloudFront.
+1. Make the change in this repo.
+2. Commit and push to `main`.
+3. Wait for the Amplify production job to succeed.
+4. Confirm the change on `albertocanaveral.com`.
+
+The DNS alias for the root domain points at Amplify-managed infrastructure, and `www.albertocanaveral.com` resolves to the same production site.
 
 ## How to customize this site
 
